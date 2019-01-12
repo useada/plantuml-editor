@@ -4,27 +4,25 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-          <div class="h3 modal-title">PlantUML</div>
+          <div class="h3 modal-title">HaHa98K.com 帮助</div>
         </div>
         <div class="modal-body">
+          <span class="h4">PlantUML介绍</span>
           <blockquote>
-            <p>Generate UML diagram from textual description</p>
+            <p><b>PlantUML</b>是一个非常方便的uml工具，只要简单的编写文本，就可以得到对应的UML图形。</p>
             <footer>
-              <a :href="official" target="_blank">{{official}}</a>
+              官网：<a :href="official" target="_blank">{{official}}</a>
             </footer>
           </blockquote>
           <div class="page-header">
-            <span class="h4">Cheat Sheet</span>
+            <span class="h4">备忘录</span>
           </div>
           <dl>
             <dt>PlantUML</dt>
             <dd>
               <ul>
                 <li>
-                  <a href="http://qiita.com/ogomr/items/0b5c4de7f38fd1482a48" target="_blank">Japanese</a>
-                </li>
-                <li>
-                  <a href="http://ogom.github.io/draw_uml/plantuml" target="_blank">English</a>
+                  <a href="http://ogom.github.io/draw_uml/plantuml" target="_blank">使用手册(English)</a>
                 </li>
               </ul>
             </dd>
@@ -44,7 +42,7 @@
             </dd>
           </dl>
           <div class="page-header">
-            <span class="h4">GitHub</span>
+            <span class="h4">GitHub(鸣谢)</span>
           </div>
           <ul>
             <li>
@@ -55,7 +53,7 @@
             </li>
           </ul>
           <div class="page-header">
-            <span class="h4">Article</span>
+            <span class="h4">资料</span>
           </div>
           <dl>
             <dt>Qiita</dt>
@@ -87,14 +85,14 @@
             </li>
           </ul>
           <div class="page-header">
-            <span class="h4">Other</span>
+            <span class="h4">其它</span>
           </div>
           <p>
             Pen graphic by <a href="http://www.flaticon.com/authors/freepik" target="_blank">freepik</a> from <a href="http://www.flaticon.com/" target="_blank">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC BY 3.0</a>. Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Maker" target="_blank">LogoMaker.com</a> https://logomakr.com/7Gn1Ck
           </p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
         </div>
       </div>
     </div>

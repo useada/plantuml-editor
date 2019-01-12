@@ -1,11 +1,12 @@
 <template>
   <div class="row functionTop">
     <div class="col-sm-12">
-      <div class="alert alert-warning" v-if="!isHTTPS">
-        Please go to <a :href="url">{{url}}</a>
-      </div>
+      <!--<div class="alert alert-warning" v-if="!isHTTPS">-->
+        <!--Please go to <a :href="url">{{url}}</a>-->
+      <!--</div>-->
       <div class="alert alert-default">
-        Preview is <kbd>{{winKey}}</kbd> or <kbd>{{macKey}}</kbd> . Snippets are <kbd>{{snippetWinKey}}</kbd> or <kbd>{{snippetMacKey}}</kbd> .
+        使用<kbd>{{winKey}}</kbd> 或 <kbd>{{macKey}}</kbd> 预览.
+        使用<kbd>{{snippetWinKey}}</kbd> 或 <kbd>{{snippetMacKey}}</kbd> 引入代码模板.
       </div>
       <div class="row form-group">
         <div class="col-sm-12">

@@ -4,12 +4,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-          <div class="h3 modal-title">Options</div>
+          <div class="h3 modal-title">选项</div>
         </div>
         <div class="modal-body">
           <form class="form-horizontal">
             <div class="form-group">
-              <label class="col-sm-2 control-label">keymap</label>
+              <label class="col-sm-2 control-label">键盘布局</label>
               <div class="col-sm-10">
                 <label class="radio-inline">
                   <input type="radio" name="keymap" v-model="keymap" value="sublime"> sublime
@@ -23,13 +23,13 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">indent</label>
+              <label class="col-sm-2 control-label">对齐</label>
               <div class="col-sm-10">
                 <label class="radio-inline">
-                  <input type="radio" name="indent" v-model="indent" value="space2"> space 2
+                  <input type="radio" name="indent" v-model="indent" value="space2"> 2个空格
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="indent" v-model="indent" value="space4"> space 4
+                  <input type="radio" name="indent" v-model="indent" value="space4"> 4个空格
                 </label>
                 <label class="radio-inline">
                   <input type="radio" name="indent" v-model="indent" value="tab"> tab
@@ -39,7 +39,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
         </div>
       </div>
     </div>

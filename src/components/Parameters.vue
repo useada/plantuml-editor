@@ -1,11 +1,11 @@
 <template>
   <form class="form-inline">
     <div class="form-group">
-      <label for="umlWidth">size&nbsp;</label>
+      <label for="umlWidth">缩放:&nbsp;</label>
       <input type="number" id="umlWidth" step="10" max="300" min="10" v-model="umlWidth" class="form-control" :disabled="!isSvg">
     </div>
     <div class="form-group">
-      <label for="umlExtension">img&nbsp;</label>
+      <label for="umlExtension">图片类型:&nbsp;</label>
       <select id="umlExtension" v-model="umlExtension" class="form-control">
         <option v-for="(option, key, index) in umlExtensions" :value="option.value" :key="index">
           {{ option.text }}
@@ -14,21 +14,21 @@
     </div>
     <div class="form-group">
       <div class="btn-group">
-        <button type="button" class="btn btn-default" @click="renderUML" data-toggle="tooltip" data-placement="bottom" title="refresh" data-container="body">
+        <button type="button" class="btn btn-default" @click="renderUML" data-toggle="tooltip" data-placement="bottom" title="刷新" data-container="body">
           <span class="glyphicon glyphicon-refresh" :class="{'fa-spin':isLoading}"></span>
         </button>
-        <button type="button" class="btn btn-default" @click="save" data-toggle="tooltip" data-placement="bottom" title="save" data-container="body">
+        <button type="button" class="btn btn-default" @click="save" data-toggle="tooltip" data-placement="bottom" title="收藏" data-container="body">
           <span class="glyphicon glyphicon-plus"></span>
         </button>
-        <a :href="src" class="btn btn-default" @click.prevent="download" data-toggle="tooltip" data-placement="bottom" title="download" data-container="body">
+        <a :href="src" class="btn btn-default" @click.prevent="download" data-toggle="tooltip" data-placement="bottom" title="下载" data-container="body">
           <span class="glyphicon glyphicon-download-alt"></span>
         </a>
-        <button type="button" class="btn btn-default" @click="print" :disabled="umlExtension!='png'" data-toggle="tooltip" data-placement="bottom" title="print" data-container="body">
+        <button type="button" class="btn btn-default" @click="print" :disabled="umlExtension!='png'" data-toggle="tooltip" data-placement="bottom" title="打印" data-container="body">
           <span class="glyphicon glyphicon-print"></span>
         </button>
         <popover-btn :title="'link'">
           <span slot="popover-btn" class="glyphicon glyphicon-link"></span>
-          <span slot="popover-title">PlantUML Server URL</span>
+          <span slot="popover-title">UML图地址</span>
           <div slot="popover-content" class="row">
             <div class="col-sm-12">
               <div class="input-group">
@@ -38,12 +38,12 @@
                 </span>
               </div>
               <span class="help-block">
-                if click, copy to clipbord .
+                点击复制链接 .
               </span>
             </div>
           </div>
         </popover-btn>
-        <button type="button" class="btn btn-default" @click="showGistModal" :disabled="umlExtension!='svg'" data-toggle="tooltip" data-placement="bottom" title="share" data-container="body">
+        <button type="button" class="btn btn-default" @click="showGistModal" :disabled="umlExtension!='svg'" data-toggle="tooltip" data-placement="bottom" title="分享" data-container="body">
           <span class="glyphicon glyphicon-share-alt"></span>
         </button>
       </div>

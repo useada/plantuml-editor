@@ -18,11 +18,32 @@
         </div>
       </div>
     </div>
+    <!--<div class="footer">-->
+      <!--<div class="row">-->
+        <!--<div class="col-sm-12 text-center">-->
+          <!--<p>Copyright (c) 2019-->
+            <!--<a href="http://www.miitbeian.gov.cn/" target='_blank'>京ICP备18062638号-1</a>-->
+          <!--</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
     <helpModal></helpModal>
     <optionsModal></optionsModal>
     <gistModal></gistModal>
   </div>
 </template>
+
+<style scoped lang="css">
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    color: white;
+    background-color: #222;
+  }
+</style>
 
 <script>
 /* @flow */
@@ -95,9 +116,10 @@ export default {
   },
   methods: {
     setHeight() {
+      const footerHeight: number = 0
       const headerHeight: number = window.$('.navbar-static-top').height()
       const functionTopHeight: number = window.$('.functionTop').height()
-      const height: number = window.innerHeight - headerHeight
+      const height: number = window.innerHeight - headerHeight - footerHeight
       const marginTop: number = 20
       const marginBottom: number = 10
       this.height = height + 'px'

@@ -4,12 +4,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-          <div class="h3 modal-title">Gist <small>upload svg and text</small></div>
+          <div class="h3 modal-title">Gist <small>上传 图片 和 代码</small></div>
         </div>
         <div class="modal-body">
           <form class="form-horizontal" @submit.prevent="submit">
             <div class="form-group" :class="{'has-error':errors.has('fileName')}">
-              <label for="fileName" class="col-sm-2 control-label">file name</label>
+              <label for="fileName" class="col-sm-2 control-label">文件名:</label>
               <div class="col-sm-10">
                 <input
                   type="text"
@@ -26,12 +26,12 @@
                   file name are <code>{{fileName}}.{{ext.svg}}</code>, <code>{{fileName}}.{{ext.txt}}</code> .
                 </span>
                 <span class="help-block" v-else>
-                  <code>.{{ext.svg}}</code> and <code>.{{ext.txt}}</code> file name
+                  <code>.{{ext.svg}}</code> 和 <code>.{{ext.txt}}</code> 文件名
                 </span>
               </div>
             </div>
             <div class="form-group">
-              <label for="description" class="col-sm-2 control-label">description</label>
+              <label for="description" class="col-sm-2 control-label">描述:</label>
               <div class="col-sm-10">
                 <input
                   type="text"
@@ -44,15 +44,15 @@
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <label class="radio-inline">
-                  <input type="radio" name="isPublic" :value="true" v-model="isPublic"> public
+                  <input type="radio" name="isPublic" :value="true" v-model="isPublic"> 公开
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="isPublic" :value="false" v-model="isPublic"> secret
+                  <input type="radio" name="isPublic" :value="false" v-model="isPublic"> 私有
                 </label>
               </div>
             </div>
             <div class="form-group" :class="{'has-error':errors.has('token')}">
-              <label for="token" class="col-sm-2 control-label">token</label>
+              <label for="token" class="col-sm-2 control-label">token:</label>
               <div class="col-sm-10">
                 <input
                   type="text"
@@ -66,14 +66,14 @@
                   {{errors.first('token')}}<br>
                 </span>
                 <span class="help-block">
-                  <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank">Creating a personal access token</a>
+                  <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank">创建一个私人 access token</a>
                 </span>
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <button type="button" class="btn btn-success" @click="createGist()" :disabled="gistApiInValid">
-                  Create a gist <i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw" v-show="isSending"></i>
+                  创建 gist <i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw" v-show="isSending"></i>
                 </button>
               </div>
             </div>
@@ -90,7 +90,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <template>
   <div class="row historyList" :style="{'height':height}">
     <div class="col-sm-12">
-      <div class="alert alert-default" v-if="!histories.length">
-        When you press the Save button, it will be added to the history.
+      <div class="alert alert-warning" v-if="!histories.length">
+        点击预览中的收藏按钮，图表将会被收藏到这里。
       </div>
       <div class="thumbnail" v-for="(history, key, index) in histories" :key="index">
         <img v-lazy="createUrl(history.encodedText)" @click="read(history.text, $event)" height="200" width="100%">
@@ -42,8 +42,8 @@ export default {
   },
   data(): any {
     return {
-      deleteMessage: 'Can I delete it?',
-      editMessage: 'Do you want to edit it?'
+      deleteMessage: '从收藏中删除?',
+      editMessage: '重新编辑这个图表?'
     }
   },
   computed: {

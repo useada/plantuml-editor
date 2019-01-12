@@ -17,7 +17,7 @@ const state: any = {
   startuml: '@startuml',
   enduml: '@enduml',
   defaultText:
-    '# PlantUML Editor\n\n1. select template\n2. write uml diagram\n\n@startuml\n\nleft to right direction\n\nactor User\n\nUser --> (1. select template)\nUser --> (2. write uml diagram)\n\n@enduml',
+    '### PlantUML Editor\n\n1. 选择UML模板\n2. 编写UML图\n\n@startuml\n\nleft to right direction\n\nactor User\n\nUser --> (1. select template)\nUser --> (2. write uml diagram)\n\n@enduml',
   text: '',
   encodedText: '',
   src: '',
