@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <transition name="fade">
+      <loading v-if="isLoading"></loading>
+    </transition>
+
     <headerNavbar></headerNavbar>
     <div class="container-fluid">
       <div class="row">
@@ -18,15 +22,11 @@
         </div>
       </div>
     </div>
-    <!--<div class="footer">-->
-      <!--<div class="row">-->
-        <!--<div class="col-sm-12 text-center">-->
-          <!--<p>Copyright (c) 2019-->
-            <!--<a href="http://www.miitbeian.gov.cn/" target='_blank'>京ICP备18062638号-1</a>-->
-          <!--</p>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+
+    <footer style="padding:20px;text-align:center;color:#999;position:relative;">©2019 haha98k.com All right reserved.
+      <a href="http://www.miitbeian.gov.cn/" style="font-size:12px;" target="_blank">京ICP备18062638号-1</a>
+      邮箱：service@haha98k.com
+    </footer>
 
     <helpModal></helpModal>
     <optionsModal></optionsModal>
@@ -42,6 +42,15 @@
     height: 25px;
     color: white;
     background-color: #222;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
   }
 </style>
 
@@ -66,6 +75,8 @@ import FunctionTop from './components/FunctionTop'
 import Uml from './components/Uml'
 import Editor from './components/Editor'
 
+import Loading from './components/loading'
+
 export default {
   name: 'app',
   store,
@@ -79,7 +90,8 @@ export default {
     CheatSheet,
     FunctionTop,
     Uml,
-    Editor
+    Editor,
+    Loading
   },
   computed: {
     historyCol(): number {
@@ -98,7 +110,8 @@ export default {
   data(): any {
     return {
       height: '0px',
-      umlH: '0px'
+      umlH: '0px',
+      isLoading: true
     }
   },
   created() {
@@ -111,6 +124,8 @@ export default {
     this.$store.dispatch('histories/defineScheme')
   },
   mounted() {
+    this.isLoading = false
+
     this.setHeight()
     window.$('[data-toggle="tooltip"]').tooltip()
   },
