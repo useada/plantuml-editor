@@ -13,7 +13,8 @@ const state: any = {
   official: 'http://plantuml.com/',
   plantuml: 'plantuml',
   server: 'http://haha98k.com/',
-  cdn: 'http://haha98k.com:2019/',
+  // cdn: 'http://haha98k.com:2019/',
+  cdn: 'https://plantuml-server.kkeisuke.app/',
   startuml: '@startuml',
   enduml: '@enduml',
   defaultText:
