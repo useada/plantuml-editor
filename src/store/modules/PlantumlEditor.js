@@ -9,12 +9,11 @@ const _: any = lodash
 const state: any = {
   isHTTPS: location.protocol === 'https:',
   FPS: Math.floor(1000 / 30 * 10), // FPS 30
-  url: 'https://plantuml-editor.kkeisuke.com/',
+  url: 'http://haha98k.com/',
   official: 'http://plantuml.com/',
   plantuml: 'plantuml',
-  server: 'https://plantuml-server.herokuapp.com/',
-  // cdn: 'https://plantuml-server.kkeisuke.app/',
-  cdn: 'http://localhost:1234/',
+  server: 'http://haha98k.com/',
+  cdn: 'http://haha98k.com:2019/',
   startuml: '@startuml',
   enduml: '@enduml',
   defaultText:
