@@ -43,6 +43,19 @@
     <link rel="manifest" href="static/manifest.json">
     <link rel="icon" sizes="192x192" href="static/favicon-192.png">
 
+    <style media="screen" type="text/css">
+      #appLoading { width: 100%; height: 100%; }
+      #appLoading img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: translateY(-50%)  translateX(-50%);
+        transform: translateY(-50%)  translateX(-50%);
+      }
+    </style>
+
     <script>
     var _hmt = _hmt || [];
     (function() {
@@ -54,11 +67,18 @@
     </script>
 
   </head>
+
   <body>
     <noscript>
       <strong>We're sorry but PlantUML Editor doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+
+    <div id="appLoading">
+      <img src="/static/loading-ball.svg" alt="loading" />
+    </div>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+
 </html>
