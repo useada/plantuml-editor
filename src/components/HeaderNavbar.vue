@@ -20,12 +20,12 @@
           <ul class="dropdown-menu">
             <li><a href="#CommonCheatSheet" @click.prevent="changeCheatSheetColSize">基础语法</a></li>
             <li class="divider"></li>
-            <li class="dropdown-header">行为类图表</li>
+            <li class="dropdown-header">行为图</li>
             <li><a href="#UseCaseCheatSheet" @click.prevent="changeCheatSheetColSize">用例图</a></li>
-            <li><a href="#ActivityCheatSheet" @click.prevent="changeCheatSheetColSize">活动图</a></li>
+            <li><a href="#ActivityCheatSheet" @click.prevent="changeCheatSheetColSize">活动图（流程图）</a></li>
             <li><a href="#SequenceCheatSheet" @click.prevent="changeCheatSheetColSize">时序图</a></li>
             <li class="divider"></li>
-            <li class="dropdown-header">结构类图表</li>
+            <li class="dropdown-header">结构图</li>
             <li><a href="#ObjectCheatSheet" @click.prevent="changeCheatSheetColSize">对象图</a></li>
             <li><a href="#ClassCheatSheet" @click.prevent="changeCheatSheetColSize">类图</a></li>
             <li><a href="#ERCheatSheet" @click.prevent="changeCheatSheetColSize">ER 图</a></li>
