@@ -7,6 +7,14 @@
           <div class="h3 modal-title">HaHa98K.com 帮助</div>
         </div>
         <div class="modal-body">
+          <span class="h4">使用帮助，问题反馈</span>
+          <blockquote>
+            <p>为方便该UML工具学习使用，反馈意见，新搭建了一个帮助平台，希望对大家有用。</p>
+            <footer>
+              官网：<a href="http://huluobo.net" target="_blank">点击进入帮助反馈中心</a>
+            </footer>
+          </blockquote>
+
           <span class="h4">PlantUML介绍</span>
           <blockquote>
             <p><b>PlantUML</b>是一个非常方便的uml工具，只要简单的编写文本，就可以得到对应的UML图形。</p>
