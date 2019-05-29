@@ -48,6 +48,13 @@
           </a>
         </li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://huluobo.net/">
+            <span class="glyphicon glyphicon-fire" style="color: red"></span> 讨论
+          </a>
+        </li>
+      </ul>
       <div class="navbar-header navbar-right">
         <ul class="navbar-text list-inline">
           <!--<li><a href="https://github.com/kkeisuke/plantuml-editor" class="navbar-link" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>-->
