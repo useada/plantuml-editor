@@ -1,32 +1,43 @@
 <template>
   <div id="app">
     <!--<transition name="fade">-->
-      <!--<loading v-if="isLoading"></loading>-->
+    <!--<loading v-if="isLoading"></loading>-->
     <!--</transition>-->
 
-      <headerNavbar></headerNavbar>
-      <div class="container-fluid">
-        <div class="row">
-          <div :class="[historyCol ? `col-sm-${historyCol}` : 'col-sm-2']" v-show="Boolean(historyCol)">
-            <historyList :height="height"></historyList>
-          </div>
-          <div class="col-editor" :class="[editorCol ? `col-sm-${editorCol}` : 'col-sm-4']">
-            <editor :height="height"></editor>
-          </div>
-          <div :class="[cheatSheetCol ? `col-sm-${cheatSheetCol}` : 'col-sm-3']" v-show="Boolean(cheatSheetCol)">
-            <cheatSheet :height="height"></cheatSheet>
-          </div>
-          <div :class="[umlCol ? `col-sm-${umlCol}` : 'col-sm-6']">
-            <functionTop></functionTop>
-            <uml :height="umlH"></uml>
-          </div>
+    <headerNavbar></headerNavbar>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          :class="[historyCol ? `col-sm-${historyCol}` : 'col-sm-2']"
+          v-show="Boolean(historyCol)"
+        >
+          <historyList :height="height"></historyList>
+        </div>
+        <div class="col-editor" :class="[editorCol ? `col-sm-${editorCol}` : 'col-sm-4']">
+          <editor :height="height"></editor>
+        </div>
+        <div
+          :class="[cheatSheetCol ? `col-sm-${cheatSheetCol}` : 'col-sm-3']"
+          v-show="Boolean(cheatSheetCol)"
+        >
+          <cheatSheet :height="height"></cheatSheet>
+        </div>
+        <div :class="[umlCol ? `col-sm-${umlCol}` : 'col-sm-6']">
+          <functionTop></functionTop>
+          <uml :height="umlH"></uml>
         </div>
       </div>
+    </div>
 
-      <footer style="padding:20px;text-align:center;color:#999;position:relative;">©2019 haha98k.com All right reserved.
-        <a href="http://www.miitbeian.gov.cn/" style="font-size:12px;" target="_blank">京ICP备18062638号-1</a>
-        邮箱：service@haha98k.com
-      </footer>
+    <footer style="padding:20px;text-align:center;color:#999;position:relative;">
+      ©2019 haha98k.com All right reserved.
+      <a
+        href="http://beian.miit.gov.cn/"
+        style="font-size:12px;"
+        target="_blank"
+      >京ICP备18062638号-1</a>
+      邮箱：service@haha98k.com
+    </footer>
 
     <helpModal></helpModal>
     <optionsModal></optionsModal>
@@ -35,23 +46,23 @@
 </template>
 
 <style scoped lang="css">
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-    color: white;
-    background-color: #222;
-  }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  color: white;
+  background-color: #222;
+}
 
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0;
-  }
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s;
-  }
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
 </style>
 
 <script>
@@ -118,11 +129,9 @@ export default {
     try {
       document.body.removeChild(document.getElementById('appLoading'))
       setTimeout(function() {
-        document.getElementById('app').style.display = 'block';
+        document.getElementById('app').style.display = 'block'
       }, 500)
-    } catch (e) {
-
-    }
+    } catch (e) {}
 
     this.resize()
     this.$store.dispatch('plantumlEditor/getLocalStrage')
